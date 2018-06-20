@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ -x "$(command -v graphviz)" ]; then
+  echo "graphviz already installed. You're good to go."
+  exit 0
+fi
+
+if ! [ -x "$(command -v brew)" ]; then
+  echo "You do not have Homebrew, unable to install graphviz."
+  echo "Install graphviz manually or install Homebrew on your system"
+  exit 1
+fi
+
+brew install graphviz

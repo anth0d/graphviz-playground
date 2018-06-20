@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ "$1" == "" ]; then
+    echo "Expected an argument. Example: 'render demo.gv'"
+    exit 1
+fi
+
+dot -O -Tsvg -Tpng "$1"

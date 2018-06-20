@@ -1,0 +1,12 @@
+digraph G {
+        rankdir="LR";
+        bgcolor="transparent"; //or transparent
+        node[width=0.15, height=0.15, shape=point,fontsize=8.0];
+        edge[weight=2, arrowhead=none];
+        node[group=main];
+        1 -> 2 -> 3 -> 4 -> 5;
+        5[shape=box,label=master];
+        node[group=branch1];
+        2 -> 6 -> 7 -> 4;
+        7[shape=box,label=branch];
+}
